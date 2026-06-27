@@ -1,0 +1,306 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Overleaf Example: A quick guide to LaTeX
+%
+% Original Source: Dave Richeson (divisbyzero.com), Dickinson College
+% Modified By: Paul Gessler, Overleaf (overleaf.com)
+% 
+% A one-size-fits-all LaTeX cheat sheet. Kept to two pages, so it 
+% can be printed (double-sided) on one piece of paper
+% 
+% Feel free to distribute this example, but please keep the referral
+% to divisbyzero.com
+% 
+% Guidance on the use of the Overleaf logos can be found here:
+% https://www.overleaf.com/for/partners/logos 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% How to use Overleaf: 
+%
+% You edit the source code here on the left, and the preview on the
+% right shows you the result within a few seconds.
+%
+% Bookmark this page and share the URL with your co-authors. They can
+% edit at the same time!
+%
+% You can upload figures, bibliographies, custom classes and
+% styles using the files menu.
+%
+% If you're new to LaTeX, the wikibook is a great place to start:
+% http://en.wikibooks.org/wiki/LaTeX
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[10pt,landscape,letterpaper]{article}
+\usepackage{amssymb,amsmath,amsthm,amsfonts}
+\usepackage[table,xcdraw]{xcolor}
+
+\usepackage{multicol,multirow}
+\usepackage{spverbatim}
+\usepackage{graphicx}
+\usepackage{ifthen}
+\usepackage[landscape]{geometry}
+\usepackage[colorlinks=true,urlcolor=olgreen]{hyperref}
+\usepackage{booktabs}
+\usepackage{fontspec}
+\setmainfont[Ligatures=TeX]{TeX Gyre Pagella}
+\setsansfont{Fira Sans}
+\setmonofont{Inconsolata}
+\usepackage{unicode-math}
+\setmathfont{TeX Gyre Pagella Math}
+\usepackage{microtype}
+\usepackage{xcolor}
+% dirty fix for microtype
+\makeatletter
+\def\MT@is@composite#1#2\relax{%
+  \ifx\\#2\\\else
+    \expandafter\def\expandafter\MT@char\expandafter{\csname\expandafter
+                    \string\csname\MT@encoding\endcsname
+                    \MT@detokenize@n{#1}-\MT@detokenize@n{#2}\endcsname}%
+    % 3 lines added:
+    \ifx\UnicodeEncodingName\@undefined\else
+      \expandafter\expandafter\expandafter\MT@is@uni@comp\MT@char\iffontchar\else\fi\relax
+    \fi
+    \expandafter\expandafter\expandafter\MT@is@letter\MT@char\relax\relax
+    \ifnum\MT@char@ < \z@
+      \ifMT@xunicode
+        \edef\MT@char{\MT@exp@two@c\MT@strip@prefix\meaning\MT@char>\relax}%
+          \expandafter\MT@exp@two@c\expandafter\MT@is@charx\expandafter
+            \MT@char\MT@charxstring\relax\relax\relax\relax\relax
+      \fi
+    \fi
+  \fi
+}
+% new:
+\def\MT@is@uni@comp#1\iffontchar#2\else#3\fi\relax{%
+  \ifx\\#2\\\else\edef\MT@char{\iffontchar#2\fi}\fi
+}
+\makeatother
+
+\ifthenelse{\lengthtest { \paperwidth = 11in}}
+    { \geometry{margin=0.4in} }
+	{\ifthenelse{ \lengthtest{ \paperwidth = 297mm}}
+		{\geometry{top=1cm,left=1cm,right=1cm,bottom=1cm} }
+		{\geometry{top=1cm,left=1cm,right=1cm,bottom=1cm} }
+	}
+\pagestyle{empty}
+\makeatletter
+\renewcommand{\section}{\@startsection{section}{1}{0mm}%
+                                {-1ex plus -.5ex minus -.2ex}%
+                                {0.5ex plus .2ex}%x
+                                {\sffamily\large}}
+\renewcommand{\subsection}{\@startsection{subsection}{2}{0mm}%
+                                {-1explus -.5ex minus -.2ex}%
+                                {0.5ex plus .2ex}%
+                                {\sffamily\normalsize\itshape}}
+\renewcommand{\subsubsection}{\@startsection{subsubsection}{3}{0mm}%
+                                {-1ex plus -.5ex minus -.2ex}%
+                                {1ex plus .2ex}%
+                                {\normalfont\small\itshape}}
+\makeatother
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt plus 0.5ex}
+% -----------------------------------------------------------------------
+
+\usepackage{academicons}
+
+\usepackage{draftwatermark,afterpage,xcolor}
+\definecolor{olgreen}{HTML}{4f9c45}
+\SetWatermarkText{}
+\SetWatermarkFontSize{0.1\paperheight}
+\SetWatermarkAngle{0}
+\SetWatermarkColor[HTML]{EDF5EC}
+%\SetWatermarkLightness{0.95}
+\SetWatermarkHorCenter{0.35\paperwidth}
+
+\begin{document}
+\footnotesize
+%\raggedright
+
+\begin{center}
+  {\huge\sffamily\bfseries Aide Mémoire de la grammaire Turque (A1-A2)} 
+\end{center} 
+\setlength{\premulticols}{0pt}
+\setlength{\postmulticols}{0pt}
+\setlength{\multicolsep}{1pt}
+\setlength{\columnsep}{1.8em}
+\begin{multicols}{3}
+
+
+
+
+\section{\underline{Structure de la langue}}
+
+ La langue turque est une langue de type SOV (Sujet – Objet – Verbe). 
+Elle se caractérise par un fonctionnement agglutinant, dans lequel les 
+mots sont formés et enrichis par l’ajout de suffixes successifs. Le turc
+ ne distingue pas le masculin du 
+féminin.  
+
+\section{\underline{Harmonies vocaliques}}
+
+La langue turque obéit à des règles d’harmonie vocalique : la 
+forme des suffixes varie en fonction des voyelles présentes dans la 
+dernière syllabe du radical.
+
+\begin{tabular}{|l|ll|ll|}
+\hline
+\multicolumn{1}{|c|}{}                          & \multicolumn{2}{l|}{Voyelle suivante}                                                                          & \multicolumn{2}{l|}{Exemples}                                                                                    \\ \cline{2-5} 
+\multicolumn{1}{|c|}{\multirow{-2}{*}{Voyelle}} & \multicolumn{1}{l|}{Type i}                                      & Type e                                      & \multicolumn{1}{l|}{Type i}                                                   & Type e                           \\ \hline \hline
+a                                               & \multicolumn{1}{l|}{\cellcolor[HTML]{C0C0C0}}                    & \cellcolor[HTML]{EFEFEF}                    & \multicolumn{1}{l|}{\cellcolor[HTML]{C0C0C0}{\color[HTML]{333333} kitap mı?}} & \cellcolor[HTML]{EFEFEF}kitaplar \\ \cline{1-1} \cline{4-5} 
+ı                                               & \multicolumn{1}{l|}{\multirow{-2}{*}{\cellcolor[HTML]{C0C0C0}ı}} & \cellcolor[HTML]{EFEFEF}                    & \multicolumn{1}{l|}{\cellcolor[HTML]{C0C0C0}{\color[HTML]{333333} kapı mı?}}  & \cellcolor[HTML]{EFEFEF}kapılar  \\ \cline{1-2} \cline{4-5} 
+o                                               & \multicolumn{1}{l|}{}                                            & \cellcolor[HTML]{EFEFEF}                    & \multicolumn{1}{l|}{top mu?}                                                  & \cellcolor[HTML]{EFEFEF}toplar   \\ \cline{1-1} \cline{4-5} 
+u                                               & \multicolumn{1}{l|}{\multirow{-2}{*}{u}}                         & \multirow{-4}{*}{\cellcolor[HTML]{EFEFEF}a} & \multicolumn{1}{l|}{okul mu?}                                                 & \cellcolor[HTML]{EFEFEF}okullar  \\ \hline \hline
+e                                               & \multicolumn{1}{l|}{\cellcolor[HTML]{C0C0C0}}                    & \cellcolor[HTML]{EFEFEF}                    & \multicolumn{1}{l|}{\cellcolor[HTML]{C0C0C0}gece mi?}                         & \cellcolor[HTML]{EFEFEF}geceler  \\ \cline{1-1} \cline{4-5} 
+i                                               & \multicolumn{1}{l|}{\multirow{-2}{*}{\cellcolor[HTML]{C0C0C0}i}} & \cellcolor[HTML]{EFEFEF}                    & \multicolumn{1}{l|}{\cellcolor[HTML]{C0C0C0}tatil mi?}                        & \cellcolor[HTML]{EFEFEF}tatiller \\ \cline{1-2} \cline{4-5} 
+ö                                               & \multicolumn{1}{l|}{}                                            & \cellcolor[HTML]{EFEFEF}                    & \multicolumn{1}{l|}{göl mü?}                                                  & \cellcolor[HTML]{EFEFEF}göller   \\ \cline{1-1} \cline{4-5} 
+ü                                               & \multicolumn{1}{l|}{\multirow{-2}{*}{u}}                         & \multirow{-4}{*}{\cellcolor[HTML]{EFEFEF}e} & \multicolumn{1}{l|}{gün mü?}                                                  & \cellcolor[HTML]{EFEFEF}günler   \\ \hline
+\end{tabular}
+
+\section{\underline{Régles sur les consonnes}}
+
+fıstıkçı şahap
+p t 
+
+
+\section{\underline{Les cas grammaticaux}}
+
+Un cas est un suffixe ajouté à un nom (ou pronom) pour indiquer sa fonction dans la phrase, comme le rôle du sujet, du complément d’objet ou du lieu.
+
+{
+\setlength{\tabcolsep}{1pt}
+\begin{tabular}{|
+>{\columncolor[HTML]{EFEFEF}}l |p{3cm}|
+>{\columncolor[HTML]{EFEFEF}}l |p{3cm}|}
+\hline
+Cas       & Définition                              & Suffixe & Exemple               \\ \hline \hline
+Nom. & sujet ou complément \shortstack{indéfini d'un verbe} &         & kedi bir fare yiyor  \shortstack{\textit{le chat mange une souris}}              \\ \hline
+Acc. & complément d'objet \shortstack{direct défini d'un verbe}          & -(y)i  & kedi fareyi yiyor  \shortstack{\textit{le chat mange la souris}}  \\ \hline
+Gén.   & possession      & -(n)in & kedinin mutfağı \shortstack{\textit{le chat de la cuisine}}    \\ \hline
+Dir.  & direction                  & -(y)e   & kedi mutfağa gidiyor \shortstack{\textit{le chat va dans la cuisine}} \\ \hline
+Loc.   & lieu où une personne ou un objet se situe & -(d)e  & kedi mutfakta yiyor \shortstack{\textit{le chat mange dans cuisine}} \\ \hline
+Abl.   & provenance                    & -(d)en  & kedi mutfaktan geliyor \textit{le chat vient de la cuisine}\\ \hline
+\end{tabular}
+}
+
+\section{\underline{La possession en détail}}
+
+Couple Génitif + Accusatif et sinon pronom +  
+
+\section{\underline{Les principaux suffixes}}
+
+siz, li, le, lik, ci
+
+
+\section{\underline{Les adjectifs}}
+
+Avant le nom pour épithéte pour qualifier le nom et après pour définir le nom et règle avec bir
+
+
+
+\columnbreak
+
+\section{\underline{Les pronoms personnels}}
+{
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+\cellcolor[HTML]{C0C0C0} & sujet & acc.   & gén.    & dir.   & loc     & abl.    \\ \hline \hline
+je                       & ben   & beni   & benin   & bana   & bende   & benden  \\ \hline
+tu                       & sen   & seni   & senin   & sana   & sende   & senden  \\ \hline
+il/elle                  & o     & onu    & onun    & ona    & onda    & ondan   \\ \hline \hline
+nous                     & biz   & bizi   & bizim   & bize   & bizde   & bizden  \\ \hline
+vous                     & siz   & sizi   & sizin   & size   & sizde   & sizden  \\ \hline
+ils/elles                & onlar & onları & onların & onlara & onlarda & olardan \\ \hline
+\end{tabular}
+}
+
+\section{\underline{La conjugaison du verbe "être"}}
+
+Au présent,...
+
+Au passé,...
+
+
+\section{\underline{La conjugaison du verbe "avoir"}}
+
+Il n'existe pas directement de verbe "avoir" dans la lanque turque,  mais seulement deux mots qui var et yok qui traduise l'e
+
+\section{\underline{La conjugaison des autres verbes}}
+
+Les verbes sont donnés à l'infinitif avec le suffixe -mek. Le radical s'obtient en supprimant ce suffixe : gelmek \rightarrow{} gel,  yapmak \rightarrow{} yap. 
+
+\subsection{Le présent continu}
+
+Le présent continu sert principalement à exprimer une action en train de se dérouler au moment où l’on parle. C’est l’équivalent direct du français “être en train de…”.
+
+\begin{tabular}{|lll|}
+\hline
+\multicolumn{3}{|c|}{Radical + \textcolor{red}{iyor} + \textcolor{blue}{suffixe personne}}                                                                    \\ \hline
+\multicolumn{1}{|l|}{Affirmatif}   & \multicolumn{1}{l|}{Négatif}       & Interrogatif     \\ \hline
+\multicolumn{1}{|l|}{gel\textcolor{red}{iyor}\textcolor{blue}{um}}    & \multicolumn{1}{l|}{gelm\textcolor{red}{iyor}\textcolor{blue}{um}}    & gel\textcolor{red}{iyor} muy\textcolor{blue}{um}?   \\ \hline
+\multicolumn{1}{|l|}{gel\textcolor{red}{iyor}\textcolor{blue}{sun}}   & \multicolumn{1}{l|}{gelm\textcolor{red}{iyor}\textcolor{blue}{sun}}   & gel\textcolor{red}{iyor} mu\textcolor{blue}{sun}?   \\ \hline
+\multicolumn{1}{|l|}{gel\textcolor{red}{iyor}} & \multicolumn{1}{l|}{gelm\textcolor{red}{iyor}}      & gel\textcolor{red}{iyor} mu?      \\ \hline\hline
+\multicolumn{1}{|l|}{gel\textcolor{red}{iyor}\textcolor{blue}{uz}}    & \multicolumn{1}{l|}{gelm\textcolor{red}{iyor}\textcolor{blue}{uz}}    & gel\textcolor{red}{iyor} muy\textcolor{blue}{uz}?   \\ \hline
+\multicolumn{1}{|l|}{gel\textcolor{red}{iyor}\textcolor{blue}{sunuz}} & \multicolumn{1}{l|}{gelm\textcolor{red}{iyor}\textcolor{blue}{sunuz}} & gel\textcolor{red}{iyor} mu\textcolor{blue}{sunuz}? \\ \hline
+\multicolumn{1}{|l|}{gel\textcolor{red}{iyor}\textcolor{blue}{lar}}   & \multicolumn{1}{l|}{gelm\textcolor{red}{iyor}\textcolor{blue}{lar}}   & gel\textcolor{red}{iyor}\textcolor{blue}{lar} mu?   \\ \hline
+\end{tabular}
+
+Yemek et Etmek sont irréguliers.
+
+
+
+
+
+\subsection{Le passé constaté}
+
+\begin{tabular}{|lll|}
+\hline
+\multicolumn{3}{|c|}{Radical + \textcolor{red}{di} + \textcolor{blue}{suffixe personne}}                                                                    \\ \hline
+\multicolumn{1}{|l|}{Affirmatif}   & \multicolumn{1}{l|}{Négatif}       & Interrogatif     \\ \hline
+\multicolumn{1}{|l|}{gel\textcolor{red}{di}\textcolor{blue}{m}}    & \multicolumn{1}{l|}{gelme\textcolor{red}{di}\textcolor{blue}{m}}    & gel\textcolor{red}{di}\textcolor{blue}{m} mi?   \\ \hline
+\multicolumn{1}{|l|}{gel\textcolor{red}{di}\textcolor{blue}{n}}   & \multicolumn{1}{l|}{gelme\textcolor{red}{di}\textcolor{blue}{n}}   & gel\textcolor{red}{di}\textcolor{blue}{n} mi?   \\ \hline
+\multicolumn{1}{|l|}{gel\textcolor{red}{di}} & \multicolumn{1}{l|}{gelme\textcolor{red}{di}}      & gel\textcolor{red}{di} mi?      \\ \hline
+\multicolumn{1}{|l|}{gel\textcolor{red}{di}\textcolor{blue}{k}}    & \multicolumn{1}{l|}{gelme\textcolor{red}{di}\textcolor{blue}{k}}    & gel\textcolor{red}{di}\textcolor{blue}{k} mi?   \\ \hline
+\multicolumn{1}{|l|}{gel\textcolor{red}{di}\textcolor{blue}{niz}} & \multicolumn{1}{l|}{gelme\textcolor{red}{di}\textcolor{blue}{niz}} & gel\textcolor{red}{di}\textcolor{blue}{niz} mi? \\ \hline
+\multicolumn{1}{|l|}{gel\textcolor{red}{di}\textcolor{blue}{ler}}   & \multicolumn{1}{l|}{gelme\textcolor{red}{di}\textcolor{blue}{ler}}   & gel\textcolor{red}{di}\textcolor{blue}{ler} mi?   \\ \hline
+\end{tabular}
+
+
+\subsection{Le futur}
+
+\begin{tabular}{|lll|}
+\hline
+\multicolumn{3}{|c|}{Radical + \textcolor{red}{ecek} + \textcolor{blue}{suffixe personne}}                                                                    \\ \hline
+\multicolumn{1}{|l|}{Affirmatif}   & \multicolumn{1}{l|}{Négatif}       & Interrogatif     \\ \hline \hline
+\multicolumn{1}{|l|}{gel\textcolor{red}{ecek}\textcolor{blue}{im}}    & \multicolumn{1}{l|}{gelmey\textcolor{red}{eceğ}\textcolor{blue}{um}}    & gel\textcolor{red}{eceğ} muy\textcolor{blue}{um}?   \\ \hline
+\multicolumn{1}{|l|}{gel\textcolor{red}{ecek}\textcolor{blue}{sin}}   & \multicolumn{1}{l|}{gelmey\textcolor{red}{ecek}\textcolor{blue}{sun}}   & gel\textcolor{red}{ecek} mu\textcolor{blue}{sun}?   \\ \hline
+\multicolumn{1}{|l|}{gel\textcolor{red}{ecek}} & \multicolumn{1}{l|}{gelmey\textcolor{red}{ecek}}      & gel\textcolor{red}{ecek} mu?      \\ \hline
+\multicolumn{1}{|l|}{gel\textcolor{red}{ecek}\textcolor{blue}{iz}}    & \multicolumn{1}{l|}{gelmey\textcolor{red}{ecek}\textcolor{blue}{uz}}    & gel\textcolor{red}{ecek} muy\textcolor{blue}{uz}?   \\ \hline
+\multicolumn{1}{|l|}{gel\textcolor{red}{ecek}\textcolor{blue}{siniz}} & \multicolumn{1}{l|}{gelmey\textcolor{red}{ecek}\textcolor{blue}{sunuz}} & gel\textcolor{red}{ecek} mu\textcolor{blue}{sunuz}? \\ \hline
+\multicolumn{1}{|l|}{gel\textcolor{red}{ecek}\textcolor{blue}{ler}}   & \multicolumn{1}{l|}{gelmey\textcolor{red}{ecek}\textcolor{blue}{lar}}   & gel\textcolor{red}{ecek}\textcolor{blue}{lar} mu?   \\ \hline
+\end{tabular}
+
+
+\subsection{L'impératif et l'optatif}
+
+Il est principalement utilisé avec Sen et Siz :
+
+\begin{tabular}{|ll|}
+\hline
+\multicolumn{2}{|l|}{Radical + \textcolor{blue}{suffixe personne}} \\ \hline
+\multicolumn{1}{|l|}{Sen}         & gel          \\ \hline
+\multicolumn{1}{|l|}{Siz}         & gelin        \\ \hline
+\end{tabular}
+
+\subsection{La capacité de faire une action}
+
+radical + ebil et abil + present simple + suffixe personne
+
+\bigskip
+
+\fbox{Auteur : François Marouchi Sémécurbe   }
+
+\end{multicols}
+
+%\SetWatermarkHorCenter{0.65\paperwidth}
+\end{document}
