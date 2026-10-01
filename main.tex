@@ -33,6 +33,10 @@
 \usepackage{amssymb,amsmath,amsthm,amsfonts}
 \usepackage[table,xcdraw]{xcolor}
 
+\usepackage{array}
+
+\usepackage{graphicx}
+
 \usepackage{multicol,multirow}
 \usepackage{spverbatim}
 \usepackage{graphicx}
@@ -118,6 +122,7 @@
 
 \begin{center}
   {\huge\sffamily\bfseries Aide Mémoire de la grammaire Turque (A1-A2)} 
+    
 \end{center} 
 \setlength{\premulticols}{0pt}
 \setlength{\postmulticols}{0pt}
@@ -158,9 +163,50 @@ i                                               & \multicolumn{1}{l|}{\multirow{
 
 \section{\underline{Régles sur les consonnes}}
 
-fıstıkçı şahap
-p t 
+\subsection{Assourdissement des consonnes}
 
+"Fıstıkçı Şahap" est un moyen mnémotechnique pour retenir les consonnes dures en turc : f, s, t, k, ç, ş, h, p
+
+Si un mot se termine par l'une de ces consonnes, et qu'on ajoute un suffixe commençant par c, d ou g, alors ces consonnes deviennent plus dures :  c $\rightarrow$ ç, d $\rightarrow$ t, g $\rightarrow$ k
+
+
+\begin{tabular}{|c|c|c|}
+\hline
+Mot & Suffixe & Forme correcte \\
+\hline
+kitap & -cı & kitapçı \\
+ağaç & -dan & ağaçtan \\
+sınıf & -da & sınıfta \\
+saat & -de & saatte \\
+\hline
+\end{tabular}
+
+\subsection{Adoucissement}
+
+En turc, les consonnes finales \textbf{p, ç, t, k} deviennent respectivement \textbf{b, c, d, ğ} lorsqu'un suffixe commençant par une voyelle est ajouté.
+
+\begin{tabular}{|c|c|c|}
+\hline
+Mot & Suffixe & Forme obtenue \\
+\hline
+kitap & -ı & kitabı \\
+ağaç & -ı & ağacı \\
+kanat & -ı & kanadı \\
+renk & -i & rengi \\
+\hline
+\end{tabular}
+
+Ce phénomène ne s'applique pas à tous les mots (notamment les mots empruntés récents ou certains mots monosyllabiques).
+
+
+\section{\underline{Le pluriel}}
+
+L'usage du pluriel, formé par le suffixe -lar, est moins systématique qu'en Français. Ainsi : 
+\begin{itemize}
+\item Les adjectifs ne sont jamais mis au pluriels, seuls les noms le sont : Buyuk kediler : des grands chats.
+\item il n'y a pas de pluriers après un nombre ou un article exprimant un pluriel : Iki Kedi : Deux chats.
+ 
+\end{itemize}
 
 \section{\underline{Les cas grammaticaux}}
 
@@ -193,7 +239,16 @@ siz, li, le, lik, ci
 
 \section{\underline{Les adjectifs}}
 
-Avant le nom pour épithéte pour qualifier le nom et après pour définir le nom et règle avec bir
+La grammaire régissant les adjectifs est simple : 
+
+\begin{itemize}
+\item Les adjectifs ne s'accordent pas en nombre.
+\item L'adjectif épithéte se place avant le nom : kucuk kedi : un petit chat ;
+\item L'adjectif attribut se place après le nom et est suffixé par les suffixes de personnes (cf section suivante) ;  
+\item Lorsque bir est utilisé en tant ...,  les adjectifs epéthétes sont situés avant bir : buyub bir kedi : un grand chat.
+\end{itemize}
+
+
 
 
 
@@ -214,11 +269,110 @@ ils/elles                & onlar & onları & onların & onlara & onlarda & olard
 \end{tabular}
 }
 
+Les pronoms personnels sujets sont facultatifs. On les utilise pour accentuer le rôle de l'acteur de l'action.
+
 \section{\underline{La conjugaison du verbe "être"}}
 
-Au présent,...
+\subsubsection{Présent}
+
+Le verbe être se construit en rajoutant aux adjectifs et aux nom le suffixe de personnes adapté. Par exemple, Ben iyiyim = Je vais bien. Mutlusun = tu es heureux. 
+
+% Please add the following required packages to your document preamble:
+% \usepackage[table,xcdraw]{xcolor}
+% Beamer presentation requires \usepackage{colortbl} instead of \usepackage[table,xcdraw]{xcolor}
+
+\begin{tabular}{|lllll|}
+\hline
+\multicolumn{5}{|c|}{Adjectif + Suffixe de personne} \\ \hline
+\rowcolor[HTML]{C0C0C0} 
+\multicolumn{1}{|l|}{\cellcolor[HTML]{C0C0C0}} &
+  \multicolumn{1}{l|}{\cellcolor[HTML]{C0C0C0}en i} &
+  \multicolumn{1}{l|}{\cellcolor[HTML]{C0C0C0}en u} &
+  \multicolumn{1}{l|}{\cellcolor[HTML]{C0C0C0}en u} &
+  en i \\ \hline
+\multicolumn{1}{|l|}{Ben} &
+  \multicolumn{1}{l|}{iyiyim} &
+  \multicolumn{1}{l|}{buyuk} &
+  \multicolumn{1}{l|}{mutlum} &
+  Sansliyim \\ \hline
+\multicolumn{1}{|l|}{Sen} &
+  \multicolumn{1}{l|}{\cellcolor[HTML]{EFEFEF}iyisin} &
+  \multicolumn{1}{l|}{\cellcolor[HTML]{EFEFEF}} &
+  \multicolumn{1}{l|}{\cellcolor[HTML]{EFEFEF}mutlusun} &
+  \cellcolor[HTML]{EFEFEF}Sanslisin \\ \hline
+\multicolumn{1}{|l|}{O} &
+  \multicolumn{1}{l|}{iyi} &
+  \multicolumn{1}{l|}{} &
+  \multicolumn{1}{l|}{mutlu} &
+  Sansli \\ \hline
+\multicolumn{1}{|l|}{Biz} &
+  \multicolumn{1}{l|}{\cellcolor[HTML]{EFEFEF}iyiyiz} &
+  \multicolumn{1}{l|}{\cellcolor[HTML]{EFEFEF}} &
+  \multicolumn{1}{l|}{\cellcolor[HTML]{EFEFEF}mutluyuz} &
+  \cellcolor[HTML]{EFEFEF}Sansliyiz \\ \hline
+\multicolumn{1}{|l|}{Siz} &
+  \multicolumn{1}{l|}{iyisiniz} &
+  \multicolumn{1}{l|}{} &
+  \multicolumn{1}{l|}{mutlusunuz} &
+  Sanslisiniz \\ \hline
+\multicolumn{1}{|l|}{Onlar} &
+  \multicolumn{1}{l|}{\cellcolor[HTML]{EFEFEF}iyiler} &
+  \multicolumn{1}{l|}{\cellcolor[HTML]{EFEFEF}} &
+  \multicolumn{1}{l|}{\cellcolor[HTML]{EFEFEF}mutlular} &
+  \cellcolor[HTML]{EFEFEF}Sansliyyar \\ \hline
+\end{tabular}
+
+L'interrogation et la négation s'obtient avec les mots mu et degil
+
+
+
 
 Au passé,...
+
+
+\begin{tabular}{|lllll|}
+\hline
+\multicolumn{5}{|c|}{Adjectif + Suffixe de personne} \\ \hline
+\rowcolor[HTML]{C0C0C0} 
+\multicolumn{1}{|l|}{\cellcolor[HTML]{C0C0C0}} &
+  \multicolumn{1}{l|}{\cellcolor[HTML]{C0C0C0}en i} &
+  \multicolumn{1}{l|}{\cellcolor[HTML]{C0C0C0}en u} &
+  \multicolumn{1}{l|}{\cellcolor[HTML]{C0C0C0}en u} &
+  en i \\ \hline
+\multicolumn{1}{|l|}{Ben} &
+  \multicolumn{1}{l|}{iyiyim} &
+  \multicolumn{1}{l|}{buyuk} &
+  \multicolumn{1}{l|}{mutlum} &
+  Sansliyim \\ \hline
+\multicolumn{1}{|l|}{Sen} &
+  \multicolumn{1}{l|}{\cellcolor[HTML]{EFEFEF}iyisin} &
+  \multicolumn{1}{l|}{\cellcolor[HTML]{EFEFEF}} &
+  \multicolumn{1}{l|}{\cellcolor[HTML]{EFEFEF}mutlusun} &
+  \cellcolor[HTML]{EFEFEF}Sanslisin \\ \hline
+\multicolumn{1}{|l|}{O} &
+  \multicolumn{1}{l|}{iyi} &
+  \multicolumn{1}{l|}{} &
+  \multicolumn{1}{l|}{mutlu} &
+  Sansli \\ \hline
+\multicolumn{1}{|l|}{Biz} &
+  \multicolumn{1}{l|}{\cellcolor[HTML]{EFEFEF}iyiyiz} &
+  \multicolumn{1}{l|}{\cellcolor[HTML]{EFEFEF}} &
+  \multicolumn{1}{l|}{\cellcolor[HTML]{EFEFEF}mutluyuz} &
+  \cellcolor[HTML]{EFEFEF}Sansliyiz \\ \hline
+\multicolumn{1}{|l|}{Siz} &
+  \multicolumn{1}{l|}{iyisiniz} &
+  \multicolumn{1}{l|}{} &
+  \multicolumn{1}{l|}{mutlusunuz} &
+  Sanslisiniz \\ \hline
+\multicolumn{1}{|l|}{Onlar} &
+  \multicolumn{1}{l|}{\cellcolor[HTML]{EFEFEF}iyiler} &
+  \multicolumn{1}{l|}{\cellcolor[HTML]{EFEFEF}} &
+  \multicolumn{1}{l|}{\cellcolor[HTML]{EFEFEF}mutlular} &
+  \cellcolor[HTML]{EFEFEF}Sansliyyar \\ \hline
+\end{tabular}
+
+
+
 
 
 \section{\underline{La conjugaison du verbe "avoir"}}
@@ -265,6 +419,7 @@ Yemek et Etmek sont irréguliers.
 \multicolumn{1}{|l|}{gel\textcolor{red}{di}\textcolor{blue}{ler}}   & \multicolumn{1}{l|}{gelme\textcolor{red}{di}\textcolor{blue}{ler}}   & gel\textcolor{red}{di}\textcolor{blue}{ler} mi?   \\ \hline
 \end{tabular}
 
+On remarquera qu'à l'interrogatif le suffixe est rattaché aux verber et pas à la particule mu.
 
 \subsection{Le futur}
 
@@ -283,24 +438,73 @@ Yemek et Etmek sont irréguliers.
 
 \subsection{L'impératif et l'optatif}
 
-Il est principalement utilisé avec Sen et Siz :
 
-\begin{tabular}{|ll|}
-\hline
-\multicolumn{2}{|l|}{Radical + \textcolor{blue}{suffixe personne}} \\ \hline
-\multicolumn{1}{|l|}{Sen}         & gel          \\ \hline
-\multicolumn{1}{|l|}{Siz}         & gelin        \\ \hline
+L'impératif et l'optatif visent à faire accomplir une action par un ou plusieurs protagonistes. L'impératif est un ordre, l'optatif une suggestion ou proposition. Sinemaya gidelim signifie « Allons au cinéma » ce qui correspond en Anglais ) à l'espression Let's go. 
+
+
+
+\begin{tabular}{l|ll|}
+\cline{2-3}
+                          & \multicolumn{1}{l|}{Optatif}                  & Impératif                \\ \cline{2-3} 
+\multirow{-2}{*}{}        & \multicolumn{2}{l|}{Radical + sufiixes}                                  \\ \hline
+\multicolumn{1}{|l|}{Ben} & \multicolumn{1}{l|}{\cellcolor[HTML]{EFEFEF}} &                          \\ \hline
+\multicolumn{1}{|l|}{Sen} & \multicolumn{1}{l|}{}                         & \cellcolor[HTML]{EFEFEF} \\ \hline
+\multicolumn{1}{|l|}{Biz} & \multicolumn{1}{l|}{\cellcolor[HTML]{EFEFEF}} &                          \\ \hline
+\multicolumn{1}{|l|}{Siz} & \multicolumn{1}{l|}{}                         & \cellcolor[HTML]{EFEFEF} \\ \hline
 \end{tabular}
+
+
+
 
 \subsection{La capacité de faire une action}
 
 radical + ebil et abil + present simple + suffixe personne
 
-\bigskip
 
-\fbox{Auteur : François Marouchi Sémécurbe   }
 
+\section{Dire l'heure}
+
+Saat kac ?
+
+Saat : heure / montre
+Dakika : minute
+Saniye : seconde
+Sabah : matin
+Öğleden sonra : après-midi
+Akşam : soir
+Gece : nuit
+Yarım : demi (utilisé pour « et demie »)
+Çeyrek
+
+
+
+\begin{tabular}{llll}
+\includegraphics[width=0.15\linewidth]{images/Clock_10-15.png} & <sdwqsd & \includegraphics[width=0.15\linewidth]{images/Clock_10-30.png}  &  dfwdsf \\
+\includegraphics[width=0.15\linewidth]{images/Clock_10-15.png} & <sdwqsd & \includegraphics[width=0.15\linewidth]{images/Clock_10-30.png}  &  dfwdsf  
+\end{tabular}
+
+
+
+\section{cunku icin hakkinda grave à}
+
+les mois, les jours de la semaine
+
+les nombres
+
+
+
+\fbox{%
+\begin{minipage}[c]{0.12\linewidth}
+    \centering
+    \includegraphics[width=\linewidth]{images/cropped-Logo-yeni-150x150.png}
+\end{minipage}%
+\hfill
+\begin{minipage}[c]{0.82\linewidth}
+    \centering
+    \Large\bfseries L'Association France--Turquie de Midi-Pyrénées
+\end{minipage}%
+}
 \end{multicols}
-
+\clearpage
 %\SetWatermarkHorCenter{0.65\paperwidth}
 \end{document}
